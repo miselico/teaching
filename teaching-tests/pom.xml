@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fi.teaching.materials</groupId>
+    <artifactId>teaching-tests</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <spring.version>4.2.1.RELEASE</spring.version>
+    </properties>
+
+    <!-- Dependencies are a list of libraries that maven should automatically download from maven central repository during the project build process-->
+    <dependencies>
+
+        <!-- Spring dependencies are only needed for the @Autowired annotation. Note the use of ${spring.version}.
+        It is in fact a simple maven variable that is specified in properties/spring.version (a few lines above).
+        Specifying version variables is pretty handy. You can make sure that all related libraries are of the same version and in case you decide that you want to move to a newer version of the library,
+         you just have to change the value of the variable, instead of going through all related dependencies. -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- JUnit dependency. Note the use of <scope>test</scope>. This means that when maven tries to execute your unit tests, it will use that library,
+        but when you actually build your final application, this library will not be added. -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito dependency, for dependency injection tests -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.10.19</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
