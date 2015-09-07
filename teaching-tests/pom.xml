@@ -30,6 +30,14 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- guava cache library. Contains for instance LoadingCache class
+         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+         </dependency>
+        -->
+
         <!-- JUnit dependency. Note the use of <scope>test</scope>. This means that when maven tries to execute your unit tests, it will use that library,
         but when you actually build your final application, this library will not be added. -->
         <dependency>
