@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>fi.teaching.custom.library</groupId>
+  <artifactId>custom-library</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150921184257</lastUpdated>
+  </versioning>
+</metadata>
