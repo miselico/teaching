@@ -63,3 +63,40 @@ and then add to your resources a file called application.properties and paste in
     spring.data.mongodb.port=27017
     spring.data.mongodb.uri=mongodb://localhost/georpg
     spring.data.mongodb.repositories.enabled=true
+    
+If you decide to use gradle for your project, your build.gradle file could look as follows
+
+    buildscript {
+        ext {
+            springBootVersion = '1.2.5.RELEASE'
+        }
+        repositories {
+            mavenCentral()
+            jcenter()
+        }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        }
+    }
+    
+    group 'fi.teaching.spring'
+    version '1.0-SNAPSHOT'
+    
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'spring-boot'
+    
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+        compile 'org.springframework.boot:spring-boot-starter-thymeleaf',
+                'org.springframework.boot:spring-boot-starter-data-mongodb',
+                'org.springframework.security:spring-security-web:4.0.1.RELEASE', //spring security
+                'org.springframework.security:spring-security-config:4.0.1.RELEASE'
+    
+    }

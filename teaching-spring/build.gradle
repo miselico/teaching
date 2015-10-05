@@ -27,6 +27,8 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf',
-            'org.springframework.boot:spring-boot-starter-data-mongodb'
+            'org.springframework.boot:spring-boot-starter-data-mongodb',
+            'org.springframework.security:spring-security-web:4.0.1.RELEASE', //spring security
+            'org.springframework.security:spring-security-config:4.0.1.RELEASE'
 
 }
